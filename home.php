@@ -22,7 +22,7 @@ if ($status === false) {
 
         $view .= '<p>';
         $view .= '<a href="' . $result['url']. '">';     
-        $view .=$result['title'];
+        $view .= $result['title'];
         $view .= '</p>';    
 
         $view .= '<p>';

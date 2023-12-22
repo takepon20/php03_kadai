@@ -22,7 +22,7 @@
 </header>
 
 <main>
-
+ <iframe src=" <?= $result['url']  ?>" width="90%" height="700" frameborder="0" allowfullscreen></iframe>
 </main>
 
 <footer>© 2006-2023 Gs News Inc.</footer>
