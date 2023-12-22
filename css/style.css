@@ -1,0 +1,63 @@
+body{
+ width: 70%;
+ margin: 10px auto;
+}
+
+h2,h4,footer{
+    text-align: center;
+}
+
+footer{
+    background-color: #333;
+    color: white;
+}
+
+form {
+    width: 80%; 
+    margin: 0 auto; 
+}
+
+label {
+    display: block; 
+    margin: 5px 0; /* ラベル間の垂直方向の余白を指定 */
+}
+
+input {
+    width: 100%; /* 入力フィールドを親要素いっぱいに広げる */
+    padding: 5px; /* 入力フィールドの内側の余白を指定 */
+    margin-bottom: 5px; /* 入力フィールド間の垂直方向の余白を指定 */
+    box-sizing: border-box; /* ボックスサイズを内側の余白を含むように指定 */
+}
+
+input[type="submit"] {
+    width: 100%;
+    justify-content: center;
+    background-color: #007bff; /* 送信ボタンの背景色 */
+    color: white; /* 送信ボタンの文字色 */
+    cursor: pointer; /* ポインターを手の形に変更 */
+    margin: 10px 0 30px;
+}
+
+
+/* グロバールメニュー */
+nav {
+    display: flex;
+    justify-content: space-around; /* 要素を等間隔に配置 */
+    align-items: center; /* 垂直方向に中央寄せ */
+    background-color: #333; /* ナビゲーションの背景色 */
+    padding: 5px; /* 内側の余白 */
+}
+
+nav ul {
+    list-style: none; /* リストのデフォルトのマーカーを非表示にする */
+    margin: 0;
+    padding: 0;
+    display: flex; /* 子要素を横に配置 */
+}
+
+nav a {
+    color: white; /* リンクの文字色 */
+    text-decoration: none; /* リンクの下線をなくす */
+    padding: 25px; /* リンクの内側の余白 */
+}
+

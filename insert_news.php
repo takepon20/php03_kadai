@@ -13,10 +13,10 @@ $pdo = news_conn();
 $stmt = $pdo->prepare(
     'INSERT INTO
         kadai_news(
-              title,  category,  url,  excerpt, date
+              title,  category,  url,  date
             )
             VALUES (
-             :title, :category, :url, :excerpt, sysdate()
+             :title, :category, :url,  sysdate()
             );'
 );
 
