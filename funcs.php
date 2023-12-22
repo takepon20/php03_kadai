@@ -24,4 +24,10 @@ function person_conn(){
     }
 }
 
+function redirect($file_name)
+{
+    header('Location: $file_name');
+    exit();
+}
+
 ?>

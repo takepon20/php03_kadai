@@ -4,7 +4,6 @@
 $title       = $_POST['title'];
 $category    = $_POST['category'];
 $url         = $_POST['url'];
-$excerpt     = $_POST['excerpt'];
 
 // DBに接続する関数
 require_once('funcs.php');
@@ -25,7 +24,6 @@ $stmt = $pdo->prepare(
 $stmt->bindValue(':title',   $title,   PDO::PARAM_STR);
 $stmt->bindValue(':category',$category,PDO::PARAM_STR);
 $stmt->bindValue(':url',     $url,     PDO::PARAM_STR);
-$stmt->bindValue(':excerpt', $excerpt, PDO::PARAM_STR);
 
 $status = $stmt->execute(); //実行
 

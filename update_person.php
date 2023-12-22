@@ -7,12 +7,12 @@ $residence   = $_POST['residence'];
 $sex         = $_POST['sex'];
 $age         = $_POST['age'];
 $introduction= $_POST['introduction'];
-$id_person   = $_POST['id_person'];
+$id          = $_POST['id'];
 
 //2. DB接続します
 //*** function化する！  *****************
 try {
-    $db_name = 'kadai_person'; //データベース名
+    $db_name = 'gs_db'; //データベース名
     $db_id   = 'root'; //アカウント名
     $db_pw   = ''; //パスワード：MAMPは'root'
     $db_host = 'localhost'; //DBホスト
@@ -26,17 +26,17 @@ $stmt = $pdo->prepare(
   'UPDATE 
    kadai_person 
    SET 
-   name = :name,nationality = :nationality,residence = :residence,sex = :sex,age = :age,introduction = :introduction,indate = sysdate() 
-   Where id_person=:id_person; ');
+   name = :name, nationality = :nationality, residence = :residence, sex = :sex, age = :age, introduction = :introduction, indate = sysdate() 
+   Where id=:id; ');
 
 // 数値の場合 PDO::PARAM_INT
 // 文字の場合 PDO::PARAM_STR
 $stmt->bindValue(':name',          $name,        PDO::PARAM_STR);
 $stmt->bindValue(':nationality',   $nationality, PDO::PARAM_STR);
-$stmt->bindValue(':residence',     $residence,   PDO::PARAM_STR); //PARAM_INTなので注意
+$stmt->bindValue(':residence',     $residence,   PDO::PARAM_STR); 
 $stmt->bindValue(':sex',           $sex,         PDO::PARAM_STR);
 $stmt->bindValue(':age',           $age,         PDO::PARAM_INT);
-$stmt->bindValue(':id_person',     $id_person,   PDO::PARAM_INT);
+$stmt->bindValue(':id',            $id,          PDO::PARAM_INT);
 $stmt->bindValue(':introduction',  $introduction,PDO::PARAM_STR);
 
 $status = $stmt->execute(); //実行

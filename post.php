@@ -27,7 +27,6 @@
      <label>Title：   <input type="text" name="title"></label><br>
      <label>Category：<input type="text" name="category"></label><br>
      <label>Url：     <input type="text" name="url"></label><br>
-     <label>Excerpt： <input type="text" name="excerpt"></label><br>
      <input type="submit" value="post">
     </div>
  </form>
