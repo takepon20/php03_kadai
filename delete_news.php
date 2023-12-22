@@ -22,5 +22,4 @@ if ($status === false) {
     exit();
 }
 
-
 ?>

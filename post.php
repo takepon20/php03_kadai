@@ -22,18 +22,14 @@
  </header>
 <!-- メイン -->
 <main>
- <form method="" action="insert.php">
-   <label>Category：
-    <input type="radio" name="category" value="trend">trend
-    <input type="radio" name="category" value="opinion">opinion
-    <input type="radio" name="category" value="culture">culture
-    <input type="radio" name="category" value="policy">policy
-   </label><br>
-   <label>Url：<input type="text" name="url"></label><br>
-   <label>Title：<input type="text" name="title"></label><br>
-   <label>excerpt：<input type="text" name="excerpt"></label><br>
-
-   <input type="submit" value="post">
+ <form method="POST" action="insert_news.php">
+    <div class="jumbotron">
+     <label>Title：   <input type="text" name="title"></label><br>
+     <label>Category：<input type="text" name="category"></label><br>
+     <label>Url：     <input type="text" name="url"></label><br>
+     <label>Excerpt： <input type="text" name="excerpt"></label><br>
+     <input type="submit" value="post">
+    </div>
  </form>
 </main>
 

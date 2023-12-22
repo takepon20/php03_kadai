@@ -22,10 +22,8 @@
  </header>
 
  <main>
-    <!-- 投稿された記事 -->
-    <div id="content">aaaaaaaaaaaaa
+    <div>
     </div>
-
  </main>
 
 <footer>Gs News</footer>

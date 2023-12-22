@@ -1,11 +1,10 @@
 <?php
 
 //1. POSTデータ取得
+$title       = $_POST['title'];
 $category    = $_POST['category'];
 $url         = $_POST['url'];
-$title       = $_POST['title'];
 $excerpt     = $_POST['excerpt'];
-$id_news     = $_POST['id_news'];
 
 //2. DB接続します
 //*** function化する！  *****************

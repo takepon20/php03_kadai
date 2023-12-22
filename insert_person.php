@@ -6,8 +6,7 @@ $nationality = $_POST['nationality'];
 $residence   = $_POST['residence'];
 $sex         = $_POST['sex'];
 $age         = $_POST['age'];
-$id_person   = $_POST['id_person'];
-
+$introduction= $_POST['introduction'];
 
 // DBに接続する関数
 require_once('funcs.php');
@@ -17,10 +16,10 @@ $pdo = person_conn();
 $stmt = $pdo->prepare(
     'INSERT INTO
         kadai_person(
-            name,nationality,residence,sex,age,indate
+              name,  nationality,  residence,  sex,  age,  introduction, date
             )
             VALUES (
-             :name, :nationality, :residence, :sex, :age, sysdate()
+             :name, :nationality, :residence, :sex, :age, :introduction, sysdate()
             );'
 );
 
@@ -30,6 +29,7 @@ $stmt->bindValue(':nationality', $nationality, PDO::PARAM_STR);
 $stmt->bindValue(':residence',   $residence,   PDO::PARAM_STR);
 $stmt->bindValue(':sex',         $sex,         PDO::PARAM_STR);
 $stmt->bindValue(':age',         $age,         PDO::PARAM_INT);
+$stmt->bindValue(':introduction',$introduction,PDO::PARAM_STR);
 
 $status = $stmt->execute(); //実行
 

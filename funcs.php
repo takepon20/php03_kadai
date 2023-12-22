@@ -1,7 +1,7 @@
 <?php
 function news_conn(){
     try {
-        $db_name = 'kadai_news'; //データベース名
+        $db_name = 'gs_db'; //データベース名
         $db_id   = 'root'; //アカウント名
         $db_pw   = ''; //パスワード：MAMPは'root'
         $db_host = 'localhost'; //DBホスト
@@ -14,7 +14,7 @@ function news_conn(){
 // プロフィールDBに接続する
 function person_conn(){
     try {
-        $db_name = 'kadai_prof'; //データベース名
+        $db_name = 'gs_db'; //データベース名
         $db_id   = 'root'; //アカウント名
         $db_pw   = ''; //パスワード：MAMPは'root'
         $db_host = 'localhost'; //DBホスト

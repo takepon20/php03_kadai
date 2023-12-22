@@ -22,15 +22,13 @@
 </header>
 
 <main>
- <form method="" action="insert.php">
-    <label>name       ：<input type="text" name="name" value=""></label><br>
-    <label>nationality：<input type="text" name="nationality" value=""></label><br>
-    <label>residence  ：<input type="text" name="residence" value=""></label><br>
-    <label>sex        ：
-        <input type="radio" name="men" value="">men</label>
-        <input type="radio" name="women" value="">women</label><br>
-    <label>age        ：<input type="number" name="age" value="age"></label><br>
-   <label>introduction：<input type="text" name="introduction"></label><br>
+ <form method="POST" action="insert_person.php">
+    <label>name       ：<input type="text"   name="name"         value=""></label><br>
+    <label>nationality：<input type="text"   name="nationality"  value=""></label><br>
+    <label>residence  ：<input type="text"   name="residence"    value=""></label><br>
+    <label>sex        ：<input type="text"   name="sex"          value=""></label><br>
+    <label>age        ：<input type="number" name="age"          value=""></label><br>
+    <label>introduction：<input type="text"  name="introduction" value=""></label><br>
    <input type="submit" value="save">
  </form>
 </main>
